@@ -10,7 +10,7 @@ class WeatherList extends Component {
   }
 
   renderWeather = (cityData) => {
-    console.log(cityData);
+    // console.log(cityData);
     let id = cityData.city.id;
     let name = cityData.city.name;
     let temperature = cityData.list.map(weather => weather.main.temp);
