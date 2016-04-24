@@ -8,12 +8,11 @@ class WeatherList extends Component {
   }
 
   renderWeather = (cityData) => {
-    console.log(cityData);
-    return(
+    return (
       <tr key={cityData.city.id}>
-        <td>{cityData.name}</td>
+        <td>{cityData.city.name}</td>
       </tr>
-    )
+    );
   }
 
   render = () => {
