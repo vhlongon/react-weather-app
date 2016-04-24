@@ -16,7 +16,7 @@ import css from '../scss/styles.scss';
 // Renader the app by wrapping the component in a provider
 ReactDOM.render(
   <Provider store={createStore(reducers)}>
-    <App title="React-Redux boilerplate"/>
+    <App title="React-Redux Weather App"/>
   </Provider>,
   document.querySelector('.react-root')
 );

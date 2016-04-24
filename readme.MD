@@ -1,12 +1,13 @@
-# React Redux boilerplate
+# React Weather app
 
-Boilerplate for rapid React prototyping using webpack with SASS/CSS Modules, Hot reloading and BrowserSync plugin.
+Project included on the Udemy Course React-Redux course: https://www.udemy.com/react-redux/learn/v4/t/lecture/4284586
+
+
+## Boilerplate info
 
 Uses babel for ES6 transpiling
 
 Webpack server port is defined as **4242** and BrowserSync plugin proxy it to **4240**
-
-The boilerplate contain a simple setup with Reducers and one Action in Redux.
 
 Entry file is ``/src/js/index.js`` and output fie is ``/dist/js/bundle.js``
 
