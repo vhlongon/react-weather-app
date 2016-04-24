@@ -16,6 +16,7 @@
   "author": "Victor Longon <vhlongon@yahoo.com.br>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.10.0",
     "babel-runtime": "^6.3.19",
     "css-loader": "^0.23.1",
     "foundation": "^4.2.1-1",

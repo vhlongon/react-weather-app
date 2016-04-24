@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
-export default class SearchBar extends Component {
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchWeather} from '../actions/index';
+
+class SearchBar extends Component {
 
   constructor(props) {
     super(props);
@@ -15,6 +19,13 @@ export default class SearchBar extends Component {
 
   onFormSubmit = (e) => {
     e.preventDefault();
+
+    //the action creator is bound to the component so we can call it via props
+    // passing the value typed on the searchbar
+    this.props.fetchWeather(this.state.term);
+
+    //Clean the input value once the user has submited the data
+    this.setState({term: ''});
   }
 
   render() {
@@ -30,3 +41,12 @@ export default class SearchBar extends Component {
     );
   }
 }
+
+// bind the Action to redux
+function MapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchWeather }, dispatch);
+}
+
+// and connect the container component to the action on redux
+// we are passing null because this component doesnt care about state beeing returned from redux
+export default connect(null, MapDispatchToProps)(SearchBar);

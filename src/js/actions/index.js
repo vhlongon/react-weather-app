@@ -1,6 +1,7 @@
+import axios from "axios";
+
 //Example call for the weather app:
 // http://api.openweathermap.org/data/2.5/forecast?q=London,us&appid=4ed7ee6678b89f4d70ae77e7c4a2f0be
-
 const API_KEY = '4ed7ee6678b89f4d70ae77e7c4a2f0be';
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 const COUNTRY_CODE = 'us';
@@ -12,8 +13,9 @@ export const FETCH_WEATER = 'FETCH_WEATER';
 
 export function fetchWeather(city) {
   let url =  `${ROOT_URL}&q=${city},${COUNTRY_CODE}`;
+  let request = axios.get(url);
   return {
     type: FETCH_WEATER,
-    url: url
+    payload: request
   };
 }
