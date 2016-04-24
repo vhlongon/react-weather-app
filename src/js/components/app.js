@@ -1,7 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
 
-import SearchBar from "../containers/search_bar";
+import SearchBar from '../containers/search_bar';
+import WeatherList from '../containers/weather_list';
 
 
 export default class App extends Component {
@@ -10,6 +11,7 @@ export default class App extends Component {
       <div>
         <h1>{this.props.title}</h1>
         <SearchBar />
+        <WeatherList />
       </div>
     );
   }

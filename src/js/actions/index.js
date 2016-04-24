@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 //Example call for the weather app:
 // http://api.openweathermap.org/data/2.5/forecast?q=London,us&appid=4ed7ee6678b89f4d70ae77e7c4a2f0be
@@ -14,6 +14,9 @@ export const FETCH_WEATER = 'FETCH_WEATER';
 export function fetchWeather(city) {
   let url =  `${ROOT_URL}&q=${city},${COUNTRY_CODE}`;
   let request = axios.get(url);
+
+  // console.log('request: ', request);
+
   return {
     type: FETCH_WEATER,
     payload: request
