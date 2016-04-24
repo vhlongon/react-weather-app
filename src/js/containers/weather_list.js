@@ -7,6 +7,15 @@ class WeatherList extends Component {
     super(props);
   }
 
+  renderWeather = (cityData) => {
+    console.log(cityData);
+    return(
+      <tr key={cityData.city.id}>
+        <td>{cityData.name}</td>
+      </tr>
+    )
+  }
+
   render = () => {
     return (
       <table>
@@ -18,6 +27,9 @@ class WeatherList extends Component {
             <th>Humidity</th>
           </tr>
         </thead>
+        <tbody>
+          {this.props.weather.map(this.renderWeather)}
+        </tbody>
       </table>
     );
   }
