@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 
 //import the component and the reducers
 import App from './components/app'
+
 import reducers from './reducers';
 
 //import your styles
