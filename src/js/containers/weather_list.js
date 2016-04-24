@@ -53,12 +53,13 @@ class WeatherList extends Component {
   }
 }
 
-// This:
+// This binds the redux 'weather' piece of state to the component so we can use props.weather
+// Here we are using ES6 destructuring to directly get state.weather
 function MapStateToProps({weather}) {
   return { weather };
 }
 
-// is the same as this, but using ES6 using destructuring
+// We could also have written like the below
 // function MapStateToProps(state) {
 //   return { weather: state.weather };
 // }
