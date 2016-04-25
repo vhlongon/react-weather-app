@@ -1,0 +1,27 @@
+
+/********************
+WeatherList Component
+********************/
+
+.weather-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    thead tr th {
+      color: $dark-gray;
+    }
+    tr td {
+      color: $text-color;
+    }
+    // svg element drawn by react-sparklines
+    svg {
+      max-width: 100%;
+    }
+  }
+
+}

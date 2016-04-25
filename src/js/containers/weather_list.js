@@ -10,7 +10,6 @@ class WeatherList extends Component {
   }
 
   renderWeather = (cityData) => {
-    console.log(cityData);
     let id = cityData.city.id;
     let name = cityData.city.name;
     let temperature = cityData.list.map(weather => weather.main.temp);
@@ -22,13 +21,13 @@ class WeatherList extends Component {
       <tr key={id}>
         <td>{name}</td>
         <td>
-          <Chart data={temperature} w={width} h={height} color="orange" unit='K' />
+          <Chart data={temperature} w={width} h={height} color="orange" unit="K" />
         </td>
         <td>
-            <Chart data={pressure} w={width} h={height} color="blue" unit='hPa' />
+            <Chart data={pressure} w={width} h={height} color="blue" unit="hPa" />
         </td>
         <td>
-            <Chart data={humidity} w={width} h={height} color="green" unit='%' />
+            <Chart data={humidity} w={width} h={height} color="green" unit="%" />
         </td>
       </tr>
     );
@@ -36,19 +35,21 @@ class WeatherList extends Component {
 
   render = () => {
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>City</th>
-            <th>Temperature (K)</th>
-            <th>Pressure (hPa)</th>
-            <th>Humidity (%)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.weather.map(this.renderWeather)}
-        </tbody>
-      </table>
+      <div className="weather-list">
+        <table>
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>Temperature (K)</th>
+              <th>Pressure (hPa)</th>
+              <th>Humidity (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.weather.map(this.renderWeather)}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }

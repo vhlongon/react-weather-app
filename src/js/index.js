@@ -10,7 +10,7 @@ import ReduxPromise from 'redux-promise';
 //import the component and the reducers
 import App from './components/app'
 
-import reducers from './reducers';
+import reducers from './reducers/index';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 

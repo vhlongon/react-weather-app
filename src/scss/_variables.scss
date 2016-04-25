@@ -1,0 +1,17 @@
+/********************************
+General configuration variables
+********************************/
+
+//Colors
+
+$blue-gray: #4EA2BB;
+$gray: desaturate($blue-gray, 100%);
+$dark-gray: darken($gray, 20%);
+
+$accent-color: $blue-gray;
+$text-color: $gray;
+
+// Sizing
+$app-max-width: 45em;
+$app-padding: 2em;
+$app-margin: 2em;
