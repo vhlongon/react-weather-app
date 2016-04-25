@@ -22,6 +22,11 @@ WeatherList Component
     svg {
       max-width: 100%;
     }
+    //td for the google map element
+    td:first-of-type {
+      width: 160px;
+      height: 100px;
+    }
   }
 
 }
